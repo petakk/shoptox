@@ -101,6 +101,7 @@ public class WicketApplication extends WebApplication
 
 		mountPage("home", HomePage.class);
 		mountPage("admin", SignInPage.class);
+		mountPage("signOut", SignOutPage.class);
 		mountPage("registration", RegistrationPage.class);
 		mountPage("singOut", SignOutPage.class);
 		mountPage("products", ProductsPage.class);

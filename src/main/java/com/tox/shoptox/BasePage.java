@@ -11,7 +11,7 @@ public class BasePage extends WebPage {
 
     public BasePage() {
         super();
-        add(new BookmarkablePageLink<Void>("singOut", HomePage.class));
+        add(new BookmarkablePageLink<Void>("singOut", SignOutPage.class));
 
         add(new WebMarkupContainer("adminMenu"));
 
@@ -28,7 +28,7 @@ public class BasePage extends WebPage {
 
     public BasePage(PageParameters parameters) {
         super(parameters);
-        add(new BookmarkablePageLink<Void>("singOut", HomePage.class));
+        add(new BookmarkablePageLink<Void>("singOut", SignOutPage.class));
         add(new WebMarkupContainer("adminMenu"));
         add( new Label("cart", (IModel<Integer>)() -> {
             if (getSession().isSignedIn()) {
