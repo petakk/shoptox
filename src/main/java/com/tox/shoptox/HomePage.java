@@ -99,7 +99,6 @@ public class HomePage extends BasePage {
 
 					orderModel.getObject().setUser(HomePage.this.getSession().getUser());
 
-
 					OrderLogic.processOrder(orderModel.getObject());
 
 					getSession().success("Enjoy it!");
