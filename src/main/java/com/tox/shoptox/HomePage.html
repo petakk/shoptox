@@ -1,0 +1,30 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+	<title>Shoptox!</title>
+</wicket:head>
+<wicket:extend>
+	<div>
+		<div wicket:id="feedbackPanel"/>
+		<ul>
+			<li wicket:id="items" class="item">
+				<img wicket:id="image" style="max-height: 290px;max-width: 200px; height: 290px; width: 200px;">
+				<h4 wicket:id="title"/>
+				<h5 wicket:id="description"/>
+				<div style="height:24px;">
+					<div class="star"></div><div class="star"></div><div class="star"></div><div class="nostar"></div>
+					<span wicket:id="cost" style="color: #FF5500; float:right"/>
+				</div>
+				<form wicket:id="edit_form"  class="active-area">
+					<div>
+						<span wicket:id = "countFeedback">
+							<input wicket:id="count" type="number" size="5"  style="width:120px;"/>
+						</span>
+						<input wicket:id="submit" type="submit" name="submit" value="Заказать" class="btn"/>
+					<!--	<div wicket:id="divmit" class="btn"/>-->
+					</div>
+				</form>
+			</li>
+		</ul>
+	</div>
+</wicket:extend>
+</html>

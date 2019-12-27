@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tox.shoptox" default-access="field">
+
+    <class name="User" table="tox_usr" dynamic-update="true">
+        <cache usage="read-write"/>
+        <id name="id">
+            <generator class="sequence">
+                <param name="sequence">USER_ID_SEQ</param>
+            </generator>
+        </id>
+        <property name="name" type="string"/>
+        <property name="password" type="string"/>
+
+    </class>
+
+    <class name="Product" table="tox_prod" dynamic-update="true">
+        <cache usage="read-write"/>
+        <id name="id">
+            <generator class="sequence">
+                <param name="sequence">PROD_ID_SEQ</param>
+            </generator>
+        </id>
+        <property name="title" type="string"/>
+        <property name="description" type="string"/>
+        <property name="image" type="string"/>
+        <property name="rating" type="double"/>
+        <property name="cost" type="double"/>
+        <property name="count" type="integer"/>
+    </class>
+
+    <class name="Order" table="tox_order" dynamic-update="true">
+        <cache usage="read-write"/>
+        <id name="id">
+            <generator class="sequence">
+                <param name="sequence">ORDER_ID_SEQ</param>
+            </generator>
+        </id>
+
+        <many-to-one name="user"
+                     class="User"
+                     column="user_id"
+                     update="false"  insert="true"
+                     not-null="true"
+                     not-found="exception"
+                     foreign-key="none"/>
+        <many-to-one name="product"
+                     class="Product"
+                     column="product_id"
+                     update="false"  insert="true"
+                     not-null="true"
+                     not-found="exception"
+                     foreign-key="none"/>
+
+        <property name="price" type="double"/>
+        <property name="count" type="int"/>
+        <property name="orderDate" type="timestamp"/>
+    </class>
+
+</hibernate-mapping>

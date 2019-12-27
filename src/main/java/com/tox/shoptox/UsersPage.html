@@ -1,0 +1,32 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <title>Wicket Examples - library</title>
+</wicket:head>
+<wicket:extend>
+
+    <table width = "100%">
+        <tr>
+            <th><span>User ID</span></th>
+            <th><span>Name</span></th>
+            <th><span>Count</span></th>
+        </tr>
+        <tr wicket:id = "users">
+            <td>
+                <a wicket:id = "details">
+                    <span wicket:id = "userId">ID</span>
+                </a>
+            </td>
+            <td>
+                    <span wicket:id = "name">
+                        Mark Twain
+                    </span>
+            </td>
+            <td>
+                    <span wicket:id = "count">
+                        Handicap Index
+                    </span>
+            </td>
+        </tr>
+    </table>
+</wicket:extend>
+</html>

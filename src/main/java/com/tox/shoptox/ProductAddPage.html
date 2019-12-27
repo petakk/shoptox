@@ -1,0 +1,53 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <title>Wicket Examples - library</title>
+</wicket:head>
+<wicket:extend>
+    <form wicket:id = "productForm">
+        <table cellpadding="3">
+            <tr>
+                <td align="right">Title:</td>
+                <td wicket:id = "titleFeedback">
+                    <input wicket:id = "title" type="text" value="" size="30"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Image:</td>
+                <td wicket:id = "imageFeedback">
+                    <input wicket:id = "image" type="text" value="" size="120"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Description:</td>
+                <td wicket:id = "descriptionFeedback">
+                    <textarea wicket:id="description" cols="40" rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Rating:</td>
+                <td wicket:id = "ratingFeedback">
+                    <input wicket:id = "rating" type="number" value="5" size="1"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Cost:</td>
+                <td wicket:id = "costFeedback">
+                    <input wicket:id = "cost" type="number" value="0" size="10"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Count:</td>
+                <td wicket:id = "countFeedback">
+                    <input wicket:id = "count" type="number" value="0" size="6"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <input type="submit" value="Сохранить"/>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </form></wicket:extend>
+</html>

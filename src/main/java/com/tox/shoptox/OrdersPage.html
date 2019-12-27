@@ -1,0 +1,50 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <title>Wicket Examples - library</title>
+</wicket:head>
+<wicket:extend>
+
+    <table width = "100%">
+        <tr>
+            <th><span>Id Заказа</span></th>
+            <th><span>Продукт</span></th>
+            <th><span>Количество</span></th>
+            <th><span>Дата</span></th>
+            <th><span>Стоимость</span></th>
+            <th><span>Покупатель</span></th>
+        </tr>
+        <tr wicket:id = "orders">
+            <td>
+                <a wicket:id = "details">
+                    <span wicket:id = "order">Huckleberry Finn</span>
+                </a>
+            </td>
+            <td>
+                    <span wicket:id = "product">
+                        Mark Twain
+                    </span>
+            </td>
+            <td>
+                    <span wicket:id = "count">
+                        Handicap Index
+                    </span>
+            </td>
+            <td>
+                    <span wicket:id = "date">
+                        Handicap Index
+                    </span>
+            </td>
+            <td>
+                    <span wicket:id = "price">
+                        Handicap Index
+                    </span>
+            </td>
+            <td>
+                    <span wicket:id = "user">
+                        Handicap Index
+                    </span>
+            </td>
+        </tr>
+    </table>
+</wicket:extend>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <div class="editable">
+        <input id="editable__trigger" wicket:id="editable__trigger" type="checkbox"/>
+        <label for="editable__trigger"><span wicket:id="editable_string"></span></label>
+        <div class="editable__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
+            <form wicket:id="edit_form" class="modal__wrap">
+                <input wicket:id="string" type="text" size="4"/><input type="submit" name="submit" value="Ok" class="btn"/>
+            </form>
+        </div>
+    </div>
+</wicket:panel>
+</body>
+</html>

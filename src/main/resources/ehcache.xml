@@ -1,0 +1,23 @@
+<ehcache>
+
+    <diskStore path="java.io.EhCache"/>
+
+    <defaultCache
+            memoryStoreEvictionPolicy="LRU"
+            maxElementsInMemory="1000"
+            eternal="true"
+            statistics="true"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="0"
+            overflowToDisk="false"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="3600"
+    />
+
+
+    <cache name="default-query-results-region" maxElementsInMemory="100000" statistics="true" eternal="true"/>
+    <cache name="com.tox.shoptox.User" maxElementsInMemory="100000" statistics="true" eternal="true"/>
+    <cache name="com.tox.shoptox.Order" maxElementsInMemory="100000" statistics="true" eternal="true"/>
+    <cache name="com.tox.shoptox.Product" maxElementsInMemory="100000" statistics="true" eternal="true"/>
+
+</ehcache>

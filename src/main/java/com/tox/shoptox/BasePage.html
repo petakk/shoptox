@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://www.w3.org/1999/XSL/Transform">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>SHOPtox</title>
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="style.css?v=3" type="text/css" media="screen" title="Stylesheet" />
+</head>
+<body>
+<div id="hd">
+    <div id="logo">
+        <h2><img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />SHOPtox</h2>
+    </div>
+     <div style="position: relative; display: inline-block; float: right; margin-top:-65px; margin-right:20px;"> <img src="/images/cart.png" id="cart" class="cart" alt="o"> <span wicket:id="cart" style="position:absolute; top: -10px; right: -15px; padding: 5px; background-color: red; border-radius: 5px;color: white; font-size: 24px;"/></div>
+    <div style="clear:both;"></div>
+</div>
+<wicket:enclosure child="singOut">
+    <div style="padding:10px;">
+        <div wicket:id="adminMenu" style="display: inline-block; float:left;"><a href="/home">Main</a> <a href="/products">Products</a> <a href="/orders">Orders</a> <a href="/users">Users</a></div>
+        <a wicket:id="singOut" style="float:right;">Logout</a>
+        <div style="clear:both;"></div>
+    </div>
+</wicket:enclosure>
+<div id="bd">
+    <div>
+        <p>
+        <wicket:child/>
+        </p>
+    </div>
+</div>
+<div id="ft">
+</div>
+</body>
+</html>
