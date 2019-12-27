@@ -35,19 +35,6 @@ public class HomePage extends BasePage {
 	public HomePage(PageParameters parameters) {
 		super(parameters);
 
-
-		cart = new Label("cart", (IModel<Integer>)() -> {
-			if (getSession().isSignedIn()) {
-				return (int) getSession().getUser().getCount();
-			} else {
-				return 0;
-			}
-		});
-		cart.setOutputMarkupId(true);
-		add(cart);
-
-
-
 		add(new FeedbackPanel("feedbackPanel"));
 
 
